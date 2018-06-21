@@ -29,21 +29,11 @@ Android 透明(沉浸式)状态栏细研
 
 ![Android 9.0 gif](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android%209.0%20%E5%8A%A8%E6%80%81.gif)
 
-- 4.4.2 
 
-![4.4](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android%204.4.2.png)
-
-- 5.0.2 
-
-![5.0.2]https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android%205.0.2.png)
-
-- 6.0
-
-![6.0](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android%206.0.png)
-
-- 9.0
-
-![9.0](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android%209.0.png)
+| 系统  | 效果图 | 系统  | 效果图|
+| ------------- | ------------- | ------------- | ------------- |
+| 4.4.2  | ![4.4](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android%204.4.2.png)  | 5.0.2   | ![5.0.2](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android%205.0.2.png) |
+| 6.0  | ![6.0](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android%206.0.png) | 9.0  | ![9.0](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android%209.0.png) |
 
 > 以上效果均为模拟器测试，如果你的真机测试有问题，请发给我并附上效果图和机型。
 
