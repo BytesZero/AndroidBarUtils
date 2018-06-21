@@ -6,9 +6,9 @@ Android 透明(沉浸式)状态栏细研
 ## 实现的功能
 
 - 透明状态栏（非半透明状态栏，个别机型无法适配全透明）
-- 动态改变ToolBar或者字定义的TitleBar颜色，修改背景色即可，不需要动态改变状态栏颜色
+- 动态改变ToolBar或者自定义的TitleBar颜色，修改背景色即可，不需要动态改变状态栏颜色
 - 状态栏主题模式（黑白色）切换
-- DrawerLayout 在4.4上白边的问题
+- 修复 DrawerLayout 在 4.4 上白边的问题
 - 适配“刘海屏”状态栏
 - 导航栏实现个人认为美观并通配的配色
 
@@ -16,7 +16,7 @@ Android 透明(沉浸式)状态栏细研
 --- | ---
 4.4 | 黑色 
 5.0~7.0 | 1/4透明黑底色+白色导航
-8.0及以上| 白底+灰色导航
+8.0及以上| 白底+灰色导航主题
 
 ## 未来可能会去实现的功能
 
@@ -27,23 +27,23 @@ Android 透明(沉浸式)状态栏细研
 
 - Android 9.0 gif
 
-![Android 9.0 gif](images/Android 9.0 动态.gif)
+![Android 9.0 gif](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android 9.0 动态.gif)
 
 - 4.4.2 
 
-![4.4](images/Android 4.4.2.png)
+![4.4](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android 4.4.2.png)
 
 - 5.0.2 
 
-![5.0.2](images/Android 5.0.2.png)
+![5.0.2](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android 5.0.2.png)
 
 - 6.0
 
-![6.0](images/Android 6.0.png)
+![6.0](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android 6.0.png)
 
 - 9.0
 
-![9.0](images/Android 9.0.png)
+![9.0](https://github.com/yy1300326388/AndroidBarUtils/blob/master/images/Android 9.0.png)
 
 > 以上效果均为模拟器测试，如果你的真机测试有问题，请发给我并附上效果图和机型。
 
