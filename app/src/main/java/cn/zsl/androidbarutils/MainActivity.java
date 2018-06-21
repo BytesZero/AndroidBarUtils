@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity
     private SwitchCompat switchCompat;
     private Toolbar toolbar;
     private FloatingActionButton fab;
-    private DrawerLayout drawer;
+    private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
     @Override
@@ -33,20 +33,20 @@ public class MainActivity extends AppCompatActivity
         //设置透明状态栏
         AndroidBarUtils.setTranslucent(this);
         //设置StatusBar 显示模式(黑色或者白色)
-        AndroidBarUtils.setStatusBarDarkMode(this, false);
+        AndroidBarUtils.setBarDarkMode(this, false);
         initToolBar();
         initView();
         initEvent();
     }
 
     private void initView() {
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         //修复DrawerLayout 在4.4 下出现白条的问题
-        AndroidBarUtils.setTranslucentDrawerLayout(drawer);
+        AndroidBarUtils.setTranslucentDrawerLayout(drawerLayout);
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -70,9 +70,9 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if (isChecked) {
-                    AndroidBarUtils.setStatusBarDarkMode(MainActivity.this, true);
+                    AndroidBarUtils.setBarDarkMode(MainActivity.this, true);
                 } else {
-                    AndroidBarUtils.setStatusBarDarkMode(MainActivity.this, false);
+                    AndroidBarUtils.setBarDarkMode(MainActivity.this, false);
                 }
             }
         });

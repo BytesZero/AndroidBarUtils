@@ -72,12 +72,12 @@ public class AndroidBarUtils {
     }
 
     /**
-     * Android 6.0使用原始的状态栏适配
+     * Android 6.0使用原始的主题适配
      *
      * @param activity Activity
      * @param darkMode 是否是黑色模式
      */
-    public static void setStatusBarDarkMode(Activity activity, boolean darkMode) {
+    public static void setBarDarkMode(Activity activity, boolean darkMode) {
         Window window = activity.getWindow();
         if (window == null) {
             return;
