@@ -12,11 +12,53 @@
         android:id="@+id/main_sc_mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="切换状态栏主题"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@android:color/white"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:switchPadding="5dp" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/main_sb_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:max="255"
+        android:progress="255"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_sc_mode" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/main_sb_red"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:max="255"
+        android:progress="255"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_sb_alpha" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/main_sb_green"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:max="255"
+        android:progress="255"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_sb_red" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/main_sb_blue"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:max="255"
+        android:progress="255"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_sb_green" />
+
 
 </android.support.constraint.ConstraintLayout>
