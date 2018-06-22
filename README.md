@@ -34,9 +34,6 @@ Android 透明(沉浸式)状态栏细研
 ## 使用方式
 [查看 wiki](https://github.com/yy1300326388/AndroidBarUtils/wiki)
 
-
-- 设置透明状态栏
-
 ## 下载 APK 测试
 [AndroidBarUtils APK](apk/app-release.apk)
 
