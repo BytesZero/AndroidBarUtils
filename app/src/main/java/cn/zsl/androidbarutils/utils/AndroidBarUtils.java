@@ -3,6 +3,7 @@ package cn.zsl.androidbarutils.utils;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v4.widget.DrawerLayout;
@@ -27,6 +28,7 @@ public class AndroidBarUtils {
 
     private static final String STATUS_BAR_HEIGHT_RES_NAME = "status_bar_height";
     private static final String NAV_BAR_HEIGHT_RES_NAME = "navigation_bar_height";
+    private static final String NAV_BAR_WIDTH_RES_NAME = "navigation_bar_width";
 
     /**
      * 设置透明StatusBar,默认文字为白色
@@ -158,6 +160,21 @@ public class AndroidBarUtils {
     }
 
     /**
+     * 获取横屏状态下导航栏的宽度
+     *
+     * @param activity activity
+     * @return 导航栏的宽度
+     */
+    private static int getNavigationBarWidth(Activity activity) {
+        if (hasNavBar(activity)) {
+            // 获得导航栏高度
+            return getBarHeight(activity, NAV_BAR_WIDTH_RES_NAME);
+        } else {
+            return 0;
+        }
+    }
+
+    /**
      * 获取Bar高度
      *
      * @param context context
@@ -226,11 +243,18 @@ public class AndroidBarUtils {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private static void createNavBar(Activity activity) {
         int navBarHeight = getNavigationBarHeight(activity);
-        if (navBarHeight > 0) {
+        int navBarWidth = getNavigationBarWidth(activity);
+        if (navBarHeight > 0 && navBarWidth > 0) {
             //创建NavigationBar
             View navBar = new View(activity);
-            FrameLayout.LayoutParams pl = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, navBarHeight);
-            pl.gravity = Gravity.BOTTOM;
+            FrameLayout.LayoutParams pl;
+            if (activity.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+                pl = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, navBarHeight);
+                pl.gravity = Gravity.BOTTOM;
+            } else {
+                pl = new FrameLayout.LayoutParams(navBarWidth, ViewGroup.LayoutParams.MATCH_PARENT);
+                pl.gravity = Gravity.END;
+            }
             navBar.setLayoutParams(pl);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 navBar.setBackgroundColor(Color.parseColor("#fffafafa"));
@@ -242,7 +266,12 @@ public class AndroidBarUtils {
             decorView.addView(navBar);
             //设置主布局PaddingBottom
             ViewGroup contentView = decorView.findViewById(android.R.id.content);
-            contentView.setPaddingRelative(0, 0, 0, navBarHeight);
+            if (activity.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+                contentView.setPaddingRelative(0, 0, 0, navBarHeight);
+            } else {
+                contentView.setPaddingRelative(0, 0, navBarWidth, 0);
+            }
+
         }
     }
 }
