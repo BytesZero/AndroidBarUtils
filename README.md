@@ -1,6 +1,8 @@
 # AndroidBarUtils
 Android 透明(沉浸式)状态栏细研
 
+[![Build Status](https://travis-ci.org/yy1300326388/AndroidBarUtils.svg?branch=master)](https://travis-ci.org/yy1300326388/AndroidBarUtils)
+
 ## 实现的功能
 
 - 透明状态栏（非半透明状态栏，个别机型无法适配全透明）
